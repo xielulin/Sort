@@ -5,6 +5,7 @@ import java.util.Arrays;
  /** 
  * @ClassName: BubbleSort 
  * @Description: 冒泡排序
+ * 最佳情况：T(n) = O(n)   最差情况：T(n) = O(n2)   平均情况：T(n) = O(n2)
  * @author: XieLulin
  * @date: 2018年3月11日 下午2:11:36  
  */
