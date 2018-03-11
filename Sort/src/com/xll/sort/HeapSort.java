@@ -5,13 +5,19 @@ import java.util.Arrays;
   /** 
  * @ClassName: HeapSort 
  * @Description: 堆排序算法的实现
+ * 堆排序是一种选择排序，
+ * 整体主要由构建初始堆+交换堆顶元素和末尾元素并重建堆两部分组成。
+ * 其中构建初始堆经推导复杂度为O(n)，在交换并重建堆的过程中，
+ * 需交换n-1次，而重建堆的过程中，根据完全二叉树的性质，
+ * [log2(n-1),log2(n-2)...1]逐步递减，近似为nlogn。
+ * 所以堆排序时间复杂度一般认为就是O(nlogn)级
  * @author: 小小调琴师
  * @date: 2018年3月10日 下午11:18:38  
  */
 public class HeapSort {
 
 	public static void main(String[] args) {
-		int [] arr = {10,15,5,7,24};
+		int [] arr = {10,15,5,7,24,21,45,32,1,6,54};
 		sort(arr);
 		System.out.println(Arrays.toString(arr));
 	}
