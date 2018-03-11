@@ -11,7 +11,7 @@ import java.util.Arrays;
  * 需交换n-1次，而重建堆的过程中，根据完全二叉树的性质，
  * [log2(n-1),log2(n-2)...1]逐步递减，近似为nlogn。
  * 所以堆排序时间复杂度一般认为就是O(nlogn)级
- * @author: 小小调琴师
+ * @author XieLulin
  * @date: 2018年3月10日 下午11:18:38  
  */
 public class HeapSort {
