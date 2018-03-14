@@ -5,13 +5,13 @@ import java.util.Arrays;
 /**
  * 
  * @ClassName: MergerSort 
- * @Description: ¹é²¢ÅÅÐò
- * ·Ö¶øÖÎÖ®(divide - conquer);Ã¿¸öµÝ¹é¹ý³ÌÉæ¼°Èý¸ö²½Öè
- * µÚÒ», ·Ö½â: °Ñ´ýÅÅÐòµÄ n ¸öÔªËØµÄÐòÁÐ·Ö½â³ÉÁ½¸ö×ÓÐòÁÐ, Ã¿¸ö×ÓÐòÁÐ°üÀ¨ n/2 ¸öÔªËØ.
- * µÚ¶þ, ÖÎÀí: ¶ÔÃ¿¸ö×ÓÐòÁÐ·Ö±ðµ÷ÓÃ¹é²¢ÅÅÐòMergeSort, ½øÐÐµÝ¹é²Ù×÷
- * µÚÈý, ºÏ²¢: ºÏ²¢Á½¸öÅÅºÃÐòµÄ×ÓÐòÁÐ,Éú³ÉÅÅÐò½á¹û.
+ * @Description: å½’å¹¶æŽ’åº
+ * åˆ†è€Œæ²»ä¹‹(divide - conquer);æ¯ä¸ªé€’å½’è¿‡ç¨‹æ¶‰åŠä¸‰ä¸ªæ­¥éª¤
+ * ç¬¬ä¸€, åˆ†è§£: æŠŠå¾…æŽ’åºçš„ n ä¸ªå…ƒç´ çš„åºåˆ—åˆ†è§£æˆä¸¤ä¸ªå­åºåˆ—, æ¯ä¸ªå­åºåˆ—åŒ…æ‹¬ n/2 ä¸ªå…ƒç´ .
+ * ç¬¬äºŒ, æ²»ç†: å¯¹æ¯ä¸ªå­åºåˆ—åˆ†åˆ«è°ƒç”¨å½’å¹¶æŽ’åºMergeSort, è¿›è¡Œé€’å½’æ“ä½œ
+ * ç¬¬ä¸‰, åˆå¹¶: åˆå¹¶ä¸¤ä¸ªæŽ’å¥½åºçš„å­åºåˆ—,ç”ŸæˆæŽ’åºç»“æžœ.
  * @author: XieLulin
- * @date: 2018Äê3ÔÂ11ÈÕ ÏÂÎç10:06:59
+ * @date: 2018å¹´3æœˆ11æ—¥ ä¸‹åˆ10:06:59
  */
 public class MergeSort {
 	public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class MergeSort {
 		if(left<right){
 			sort(arr,left,mid);
 			sort(arr,mid+1,right);
-			//×óÓÒ¹é²¢
+			//å·¦å³å½’å¹¶
 			merge(arr,left,mid,right);
 		}
 	}
@@ -40,24 +40,24 @@ public class MergeSort {
 		int j = mid+1;
 		int k = 0;
 		while(i<=mid&&j<=right){
-			//Èç¹û×ó±ßµÄÖµÐ¡£¬¾Í°Ñ×ó±ßµÄ·ÅÈëÁÙÊ±Êý×éÖÐ£¬·ñÔò£¬½«ÓÒ±ßµÄ·ÅÈëÁÙÊ±Êý×é
+			//å¦‚æžœå·¦è¾¹çš„å€¼å°ï¼Œå°±æŠŠå·¦è¾¹çš„æ”¾å…¥ä¸´æ—¶æ•°ç»„ä¸­ï¼Œå¦åˆ™ï¼Œå°†å³è¾¹çš„æ”¾å…¥ä¸´æ—¶æ•°ç»„
 			if(arr[i]<arr[j]){
 				temp[k++] = arr[i++];
 			}else{
 				temp[k++] = arr[j++];
 			}
 		}
-		//½«×ó±ßµÄÊýÒÆÈëÊý×é
+		//å°†å·¦è¾¹çš„æ•°ç§»å…¥æ•°ç»„
 		while(i<=mid){
 			temp[k++]=arr[i++];
 		}
 		
-		//½«ÓÒ±ßµÄÊýÒÆÈëÊý×é
+		//å°†å³è¾¹çš„æ•°ç§»å…¥æ•°ç»„
 		while(j<=right){
 			temp[k++] = arr[j++];
 		}
 		
-		//°ÑÐÂÊý×éµÄÊý¸²¸ÇÔ­Êý×é
+		//æŠŠæ–°æ•°ç»„çš„æ•°è¦†ç›–åŽŸæ•°ç»„
 		for (int k2 = 0; k2 < temp.length; k2++) {
 			arr[k2+left]=temp[k2];
 		}

@@ -3,13 +3,13 @@ package com.xll.sort;
 import java.util.Arrays;
 
 /**
- * Ñ¡ÔñÅÅĞò
+ * é€‰æ‹©æ’åº
  * @ClassName: SelectionSort 
- * @Description: ½«ÎŞĞòÖĞ×î´ó»ò×îĞ¡µÄ²åÈëµ½ÓĞĞò¶ÓÁĞµÄÄ©Î²
- * Ê±¼ä¸´ÔÓ¶È£º×î¼ÑÇé¿ö£ºT(n) = O(n2)  ×î²îÇé¿ö£ºT(n) = O(n2)  Æ½¾ùÇé¿ö£ºT(n) = O(n2)
- * ×îÎÈ¶¨µÄÅÅĞòËã·¨
+ * @Description: å°†æ— åºä¸­æœ€å¤§æˆ–æœ€å°çš„æ’å…¥åˆ°æœ‰åºé˜Ÿåˆ—çš„æœ«å°¾
+ * æ—¶é—´å¤æ‚åº¦ï¼šæœ€ä½³æƒ…å†µï¼šT(n) = O(n2)  æœ€å·®æƒ…å†µï¼šT(n) = O(n2)  å¹³å‡æƒ…å†µï¼šT(n) = O(n2)
+ * æœ€ç¨³å®šçš„æ’åºç®—æ³•
  * @author: XieLulin
- * @date: 2018Äê3ÔÂ11ÈÕ ÏÂÎç2:57:40
+ * @date: 2018å¹´3æœˆ11æ—¥ ä¸‹åˆ2:57:40
  */
 public class SelectionSort {
 	public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class SelectionSort {
 
 	/**  
 	* @Title: sort  
-	* @Description: Ñ¡ÔñÅÅĞò                                                                                                                                                                                                 																																																																																																																																																																																																																																																																																																																																																																																																																																																																								                                                     ÅÅĞò
+	* @Description: é€‰æ‹©æ’åº                                                                                                                                                                                                 																																																																																																																																																																																																																																																																																																																																																																																																																																																																								                                                     æ’åº
 	* @param @param arr       
 	* @return void     
 	* @throws  
@@ -30,7 +30,7 @@ public class SelectionSort {
 		for(int i=0;i<length-1;i++){
 			int index=i;
 			for(int j=i+1;j<length;j++){
-				 if(arr[index]>arr[j]){//Ñ¡³ö×îĞ¡ÖµµÄÎ»ÖÃ
+				 if(arr[index]>arr[j]){//é€‰å‡ºæœ€å°å€¼çš„ä½ç½®
 					 index=j;
 				 }
 			}

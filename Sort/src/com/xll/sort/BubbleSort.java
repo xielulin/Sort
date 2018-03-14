@@ -4,11 +4,11 @@ import java.util.Arrays;
 
  /** 
  * @ClassName: BubbleSort 
- * @Description: Ã°ÅİÅÅĞò
- * ×î¼ÑÇé¿ö£ºT(n) = O(n)   ×î²îÇé¿ö£ºT(n) = O(n2) 
- *   Æ½¾ùÇé¿ö£ºT(n) = O(n2)
+ * @Description: å†’æ³¡æ’åº
+ * æœ€ä½³æƒ…å†µï¼šT(n) = O(n)   æœ€å·®æƒ…å†µï¼šT(n) = O(n2) 
+ *   å¹³å‡æƒ…å†µï¼šT(n) = O(n2)
  * @author: XieLulin
- * @date: 2018Äê3ÔÂ11ÈÕ ÏÂÎç2:11:36  
+ * @date: 2018å¹´3æœˆ11æ—¥ ä¸‹åˆ2:11:36  
  */
 public class BubbleSort {
 
@@ -21,7 +21,7 @@ public class BubbleSort {
 	/**
 	 * 
 	* @Title: sort  
-	* @Description: Ã°ÅİÅÅĞò
+	* @Description: å†’æ³¡æ’åº
 	* @param @param arr       
 	* @return void     
 	* @throws
@@ -40,7 +40,7 @@ public class BubbleSort {
 	/**
 	 * 
 	* @Title: swap  
-	* @Description: ½»»»Êı×éÏàÁÚµÄÁ½¸öÔªËØ 
+	* @Description: äº¤æ¢æ•°ç»„ç›¸é‚»çš„ä¸¤ä¸ªå…ƒç´  
 	* @param @param arr
 	* @param @param i       
 	* @return void     

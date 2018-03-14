@@ -4,14 +4,14 @@ import java.util.Arrays;
 
  /** 
  * @ClassName: ShellSort 
- * @Description: Ï£¶ûÅÅÐò
- * Ñ¡ÔñÒ»¸öÔöÁ¿ÐòÁÐt1£¬t2£¬¡­£¬tk£¬ÆäÖÐti>tj£¬tk=1£»
- * °´ÔöÁ¿ÐòÁÐ¸öÊýk£¬¶ÔÐòÁÐ½øÐÐk ÌËÅÅÐò£»
- * Ã¿ÌËÅÅÐò£¬¸ù¾Ý¶ÔÓ¦µÄÔöÁ¿ti£¬½«´ýÅÅÐòÁÐ·Ö¸î³ÉÈô¸É³¤¶ÈÎªm µÄ×ÓÐòÁÐ£¬
- * ·Ö±ð¶Ô¸÷×Ó±í½øÐÐÖ±½Ó²åÈëÅÅÐò¡£½öÔöÁ¿Òò×ÓÎª1 Ê±£¬
- * Õû¸öÐòÁÐ×÷ÎªÒ»¸ö±íÀ´´¦Àí£¬±í³¤¶È¼´ÎªÕû¸öÐòÁÐµÄ³¤¶È¡£
+ * @Description: å¸Œå°”æŽ’åº
+ * é€‰æ‹©ä¸€ä¸ªå¢žé‡åºåˆ—t1ï¼Œt2ï¼Œâ€¦ï¼Œtkï¼Œå…¶ä¸­ti>tjï¼Œtk=1ï¼›
+ * æŒ‰å¢žé‡åºåˆ—ä¸ªæ•°kï¼Œå¯¹åºåˆ—è¿›è¡Œk è¶ŸæŽ’åºï¼›
+ * æ¯è¶ŸæŽ’åºï¼Œæ ¹æ®å¯¹åº”çš„å¢žé‡tiï¼Œå°†å¾…æŽ’åºåˆ—åˆ†å‰²æˆè‹¥å¹²é•¿åº¦ä¸ºm çš„å­åºåˆ—ï¼Œ
+ * åˆ†åˆ«å¯¹å„å­è¡¨è¿›è¡Œç›´æŽ¥æ’å…¥æŽ’åºã€‚ä»…å¢žé‡å› å­ä¸º1 æ—¶ï¼Œ
+ * æ•´ä¸ªåºåˆ—ä½œä¸ºä¸€ä¸ªè¡¨æ¥å¤„ç†ï¼Œè¡¨é•¿åº¦å³ä¸ºæ•´ä¸ªåºåˆ—çš„é•¿åº¦ã€‚
  * @author: XieLulin
- * @date: 2018Äê3ÔÂ11ÈÕ ÏÂÎç5:10:05  
+ * @date: 2018å¹´3æœˆ11æ—¥ ä¸‹åˆ5:10:05  
  */
 public class ShellSort {
 	public static void main(String[] args) {
@@ -22,18 +22,18 @@ public class ShellSort {
 
 	/**  
 	* @Title: sort  
-	* @Description: Ï£¶ûÅÅÐò
+	* @Description: å¸Œå°”æŽ’åº
 	* @param @param arr       
 	* @return void     
 	* @throws  
 	*/ 
 	private static void sort(int[] arr) {
 		 for(int gap=arr.length/2;gap>0;gap/=2){
-	           //´ÓµÚgap¸öÔªËØ£¬Öð¸ö¶ÔÆäËùÔÚ×é½øÐÐÖ±½Ó²åÈëÅÅÐò²Ù×÷
+	           //ä»Žç¬¬gapä¸ªå…ƒç´ ï¼Œé€ä¸ªå¯¹å…¶æ‰€åœ¨ç»„è¿›è¡Œç›´æŽ¥æ’å…¥æŽ’åºæ“ä½œ
 	           for(int i=gap;i<arr.length;i++){
 	               int j = i;
 	               while(j-gap>=0 && arr[j]<arr[j-gap]){
-	                   //²åÈëÅÅÐò²ÉÓÃ½»»»·¨
+	                   //æ’å…¥æŽ’åºé‡‡ç”¨äº¤æ¢æ³•
 	                   swap(arr,j,j-gap);
 	                   j-=gap;
 	               }
@@ -43,7 +43,7 @@ public class ShellSort {
 
 	/**  
 	* @Title: swap  
-	* @Description: ½»»»Á½¸öÊý×éÔªËØµÄÖµ
+	* @Description: äº¤æ¢ä¸¤ä¸ªæ•°ç»„å…ƒç´ çš„å€¼
 	* @param @param arr
 	* @param @param j
 	* @param @param i       

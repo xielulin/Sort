@@ -2,16 +2,16 @@ package com.xll.sort;
 
 import java.util.Arrays;
 
- /** ��������
+ /** 插入排序
  * @ClassName: InsertionSort 
- * @Description: �ӵ�һ��Ԫ�ؿ�ʼ����Ԫ�ؿ�����Ϊ�Ѿ�������
- * ȡ����һ��Ԫ�أ����Ѿ������Ԫ�������дӺ���ǰɨ�裻
- * �����Ԫ�أ������򣩴�����Ԫ�أ�����Ԫ���Ƶ���һλ�ã�
- * �ظ�����3��ֱ���ҵ��������Ԫ��С�ڻ��ߵ�����Ԫ�ص�λ�ã�
- * ����Ԫ�ز��뵽��λ�ú�
- * �ظ�����2~5��
+ * @Description: 从第一个元素开始，该元素可以认为已经被排序；
+ * 取出下一个元素，在已经排序的元素序列中从后向前扫描；
+ * 如果该元素（已排序）大于新元素，将该元素移到下一位置；
+ * 重复步骤3，直到找到已排序的元素小于或者等于新元素的位置；
+ * 将新元素插入到该位置后；
+ * 重复步骤2~5。
  * @author: XieLulin
- * @date: 2018��3��11�� ����3:46:38  
+ * @date: 2018年3月11日 下午3:46:38  
  */
 public class InsertionSort {
 	public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class InsertionSort {
 	/**
 	 * 
 	* @Title: sort  
-	* @Description: ���������㷨
+	* @Description: 插入排序算法
 	* @param @param arr       
 	* @return void     
 	* @throws

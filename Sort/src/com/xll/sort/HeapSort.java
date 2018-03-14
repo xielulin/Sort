@@ -4,15 +4,15 @@ import java.util.Arrays;
 
   /** 
  * @ClassName: HeapSort 
- * @Description: ¶ÑÅÅĞòËã·¨µÄÊµÏÖ
- * ¶ÑÅÅĞòÊÇÒ»ÖÖÑ¡ÔñÅÅĞò£¬
- * ÕûÌåÖ÷ÒªÓÉ¹¹½¨³õÊ¼¶Ñ+½»»»¶Ñ¶¥ÔªËØºÍÄ©Î²ÔªËØ²¢ÖØ½¨¶ÑÁ½²¿·Ö×é³É¡£
- * ÆäÖĞ¹¹½¨³õÊ¼¶Ñ¾­ÍÆµ¼¸´ÔÓ¶ÈÎªO(n)£¬ÔÚ½»»»²¢ÖØ½¨¶ÑµÄ¹ı³ÌÖĞ£¬
- * Ğè½»»»n-1´Î£¬¶øÖØ½¨¶ÑµÄ¹ı³ÌÖĞ£¬¸ù¾İÍêÈ«¶ş²æÊ÷µÄĞÔÖÊ£¬
- * [log2(n-1),log2(n-2)...1]Öğ²½µİ¼õ£¬½üËÆÎªnlogn¡£
- * ËùÒÔ¶ÑÅÅĞòÊ±¼ä¸´ÔÓ¶ÈÒ»°ãÈÏÎª¾ÍÊÇO(nlogn)¼¶
+ * @Description: å †æ’åºç®—æ³•çš„å®ç°
+ * å †æ’åºæ˜¯ä¸€ç§é€‰æ‹©æ’åºï¼Œ
+ * æ•´ä½“ä¸»è¦ç”±æ„å»ºåˆå§‹å †+äº¤æ¢å †é¡¶å…ƒç´ å’Œæœ«å°¾å…ƒç´ å¹¶é‡å»ºå †ä¸¤éƒ¨åˆ†ç»„æˆã€‚
+ * å…¶ä¸­æ„å»ºåˆå§‹å †ç»æ¨å¯¼å¤æ‚åº¦ä¸ºO(n)ï¼Œåœ¨äº¤æ¢å¹¶é‡å»ºå †çš„è¿‡ç¨‹ä¸­ï¼Œ
+ * éœ€äº¤æ¢n-1æ¬¡ï¼Œè€Œé‡å»ºå †çš„è¿‡ç¨‹ä¸­ï¼Œæ ¹æ®å®Œå…¨äºŒå‰æ ‘çš„æ€§è´¨ï¼Œ
+ * [log2(n-1),log2(n-2)...1]é€æ­¥é€’å‡ï¼Œè¿‘ä¼¼ä¸ºnlognã€‚
+ * æ‰€ä»¥å †æ’åºæ—¶é—´å¤æ‚åº¦ä¸€èˆ¬è®¤ä¸ºå°±æ˜¯O(nlogn)çº§
  * @author XieLulin
- * @date: 2018Äê3ÔÂ10ÈÕ ÏÂÎç11:18:38  
+ * @date: 2018å¹´3æœˆ10æ—¥ ä¸‹åˆ11:18:38  
  */
 public class HeapSort {
 
@@ -25,13 +25,13 @@ public class HeapSort {
 	/**
 	 * 
 	* @Title: sort  
-	* @Description: ¶ÑÅÅĞò  
-	* @param @param arr   ´ıÅÅĞòµÄÊı×é
+	* @Description: å †æ’åº  
+	* @param @param arr   å¾…æ’åºçš„æ•°ç»„
 	* @return void    
 	* @throws
 	 */
 	private static void sort(int[] arr) {
-		for(int i=arr.length/2-1;i>=0;i--){//¹¹½¨´ó¶¥¶Ñ,´ÓµÚÒ»¸ö·ÇÒ¶×Ó½Úµã£¬´ÓÏÂÖÁÉÏµ÷Õû
+		for(int i=arr.length/2-1;i>=0;i--){//æ„å»ºå¤§é¡¶å †,ä»ç¬¬ä¸€ä¸ªéå¶å­èŠ‚ç‚¹ï¼Œä»ä¸‹è‡³ä¸Šè°ƒæ•´
 			adjustHeap(arr, i, arr.length);
 		}
 		
@@ -46,17 +46,17 @@ public class HeapSort {
 	
 	/**  
 	* @Title: adjustHeap  
-	* @Description: ½«Êı×éµ÷ÕûÎª¶Ñ
-	* @param @param arr ´ıµ÷ÕûµÄÊı×é
-	* @param @param i µ±Ç°´ıµ÷ÕûµÄÔªËØ
-	* @param @param length  ´ıµ÷ÕûÊı×éµÄ´ıµ÷Õû³¤¶È     
+	* @Description: å°†æ•°ç»„è°ƒæ•´ä¸ºå †
+	* @param @param arr å¾…è°ƒæ•´çš„æ•°ç»„
+	* @param @param i å½“å‰å¾…è°ƒæ•´çš„å…ƒç´ 
+	* @param @param length  å¾…è°ƒæ•´æ•°ç»„çš„å¾…è°ƒæ•´é•¿åº¦     
 	* @return void     
 	* @throws  
 	*/ 
 	private static void adjustHeap(int arr[],int i,int length){
 		int temp = arr[i];
 		for(int k=2*i+1;k<length;k=2*k+1){
-			if(k+1<length&&arr[k]<arr[k+1]){//Èç¹û×ó×Ó½ÚµãĞ¡ÓÚÓÒ×Ó½Úµã£¬kÖ¸ÏòÓÒ×Ó½Úµã
+			if(k+1<length&&arr[k]<arr[k+1]){//å¦‚æœå·¦å­èŠ‚ç‚¹å°äºå³å­èŠ‚ç‚¹ï¼ŒkæŒ‡å‘å³å­èŠ‚ç‚¹
 				k++;
 			}
 			if(arr[k]>temp){
@@ -71,7 +71,7 @@ public class HeapSort {
 	
 	/**  
 	* @Title: swap  
-	* @Description: ½»»»  
+	* @Description: äº¤æ¢  
 	* @param @param arr 
 	* @param @param a
 	* @param @param b       
