@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * 
- * @ClassName: MergerSort 
+ * @ClassName: MergerSort
  * @Description: 归并排序
  * 分而治之(divide - conquer);每个递归过程涉及三个步骤
  * 第一, 分解: 把待排序的 n 个元素的序列分解成两个子序列, 每个子序列包括 n/2 个元素.

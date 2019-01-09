@@ -11,6 +11,11 @@ import java.util.Arrays;
  * 需交换n-1次，而重建堆的过程中，根据完全二叉树的性质，
  * [log2(n-1),log2(n-2)...1]逐步递减，近似为nlogn。
  * 所以堆排序时间复杂度一般认为就是O(nlogn)级
+ *  算法步骤：
+ * 1）创建一个堆H[0..n-1]
+ * 2）把堆首（最大值）和堆尾互换
+ * 3）把堆的尺寸缩小1，并调用shift_down(0),目的是把新的数组顶端数据调整到相应位置
+ * 4） 重复步骤2，直到堆的尺寸为1
  * @author XieLulin
  * @date: 2018年3月10日 下午11:18:38  
  */
@@ -25,8 +30,8 @@ public class HeapSort {
 	/**
 	 * 
 	* @Title: sort  
-	* @Description: 堆排序  
-	* @param @param arr   待排序的数组
+	* @Description: 堆排序
+	* @param @param arr 待排序的数组
 	* @return void    
 	* @throws
 	 */
@@ -46,7 +51,7 @@ public class HeapSort {
 	
 	/**  
 	* @Title: adjustHeap  
-	* @Description: 将数组调整为堆
+	* @Description: 将数组调整为堆 堆是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。
 	* @param @param arr 待调整的数组
 	* @param @param i 当前待调整的元素
 	* @param @param length  待调整数组的待调整长度     
