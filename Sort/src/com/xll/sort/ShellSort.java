@@ -1,6 +1,8 @@
 package com.xll.sort;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @ClassName: ShellSort
@@ -16,6 +18,7 @@ import java.util.Arrays;
 public class ShellSort {
     public static void main(String[] args) {
         int[] arr = {1, 3, 2, 6, 5, 4, 7, 9, 8};
+        List<String> list = new ArrayList<>();
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
